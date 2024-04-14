@@ -1,7 +1,10 @@
+import { Container, Logo } from '@/components'
+
 export default function Home() {
   return (
-    <div>
+    <Container>
+      <Logo />
       <h1>Home</h1>
-    </div>
+    </Container>
   )
 }
