@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@awesome.me/kit-ebf6e3e7b8": "^1.0.7",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/react-fontawesome": "latest",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
@@ -17,6 +20,7 @@
     "next": "14.2.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-fontawesome": "^1.7.1",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7"
   },
