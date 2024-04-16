@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button'
 import { Timeline } from '@/components/ui/timeline'
 import { Card, TimelineItem } from '@/components/home'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHandFist } from '@awesome.me/kit-ebf6e3e7b8/icons/sharp/solid'
-import { faDiscord, faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faHandFist, faBook } from '@awesome.me/kit-ebf6e3e7b8/icons/sharp/solid'
+import { faDiscord, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 
 export default function Home() {
   return (
@@ -16,16 +16,18 @@ export default function Home() {
           A collective of <span className={'text-foreground'}>home-stakers</span> for the Ethereum
           network
         </h2>
-        <div className={'flex flex-row items-center gap-4'}>
+        <div className={'flex flex-col sm:flex-row items-center gap-4'}>
           <div>
             <FontAwesomeIcon
               icon={faHandFist}
               className={'mr-2'}
             />
-            <span className={'font-semibold text-sm'}>Unionize</span>
+            <span className={'font-semibold text-sm'}>Unionize: </span>
           </div>
           <Button
             className={'items-center'}
+            size={'sm'}
+            variant={'secondary'}
             asChild
           >
             <Link href={'https://discord.gg/57EJbMGX'}>
@@ -38,6 +40,8 @@ export default function Home() {
           </Button>
           <Button
             className={'items-center'}
+            size={'sm'}
+            variant={'secondary'}
             asChild
           >
             <Link href={'https://twitter.com/stakersunion'}>
@@ -46,6 +50,20 @@ export default function Home() {
                 className={'mr-2'}
               />
               Twitter
+            </Link>
+          </Button>
+          <Button
+            className={'items-center'}
+            size={'sm'}
+            variant={'secondary'}
+            asChild
+          >
+            <Link href={'https://github.com/stakersunion/docs'}>
+              <FontAwesomeIcon
+                icon={faGithub}
+                className={'mr-2'}
+              />
+              GitHub
             </Link>
           </Button>
         </div>
@@ -63,6 +81,17 @@ export default function Home() {
           We aim to build a registry of interested home-stakers to support their activities by
           securing stable incentives from ecosystem participants.
         </Card>
+      </div>
+      <div className={'flex justify-center'}>
+        <Button asChild>
+          <Link href={'https://docs.stakersunion.com/'}>
+            <FontAwesomeIcon
+              icon={faBook}
+              className={'mr-2'}
+            />
+            View Proposal
+          </Link>
+        </Button>
       </div>
       <div className={'my-14'}>
         <h2 className={'font-bold text-4xl text-muted-foreground text-center'}>
@@ -85,9 +114,9 @@ export default function Home() {
             position={'right'}
             status={'current'}
           >
-            Define the structure of the union, including membership requirements, governance model,
-            and decision-making processes. Establish clear guidelines for participation and
-            contribution.
+            Define the structure of the union including membership requirements, governance model,
+            and decision-making processes. Use open contributions to{' '}
+            <Link href={'https://docs.stakersunion.com/'} className={'underline'}>documentation site</Link>.
           </TimelineItem>
           <TimelineItem
             title={'Build Partnerships'}
