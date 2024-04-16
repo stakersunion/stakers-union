@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Container, Logo } from '@/components'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -21,12 +22,17 @@ export default function Home() {
           A collective of <span className={'text-foreground'}>home-stakers</span> for the Ethereum
           network
         </h2>
-        <Button className={'items-center'}>
-          <FontAwesomeIcon
-            icon={faHandFist}
-            className={'mr-2'}
-          />
-          Unionize
+        <Button
+          className={'items-center'}
+          asChild
+        >
+          <Link href={'https://discord.gg/57EJbMGX'}>
+            <FontAwesomeIcon
+              icon={faHandFist}
+              className={'mr-2'}
+            />
+            Unionize
+          </Link>
         </Button>
       </div>
       <div className={'grid grid-cols-1 sm:grid-cols-3 gap-4 my-14'}>
@@ -128,7 +134,9 @@ export default function Home() {
         </Timeline>
       </div>
       <div className={'my-16'}>
-        <p className={'text-muted-foreground text-center'}>Created by Ethereum community members.</p>
+        <p className={'text-muted-foreground text-center'}>
+          Created by Ethereum community members.
+        </p>
       </div>
     </Container>
   )
