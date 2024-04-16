@@ -11,7 +11,7 @@ const TimelineItem = ({ title, children, status, position }) => {
     <TimelineItemWrap status={status}>
       <TimelineHeading
         side={position}
-        className={status === 'done' ? 'text-white' : 'text-destructive'}
+        className={status ? 'text-white' : 'text-destructive'}
       >
         {title}
       </TimelineHeading>
@@ -19,7 +19,7 @@ const TimelineItem = ({ title, children, status, position }) => {
       {children && <TimelineLine done={status === 'done'} />}
       <TimelineContent
         side={position}
-        className={status === 'done' ? 'text-white' : 'text-destructive'}
+        className={status ? 'text-white' : 'text-destructive'}
       >
         {children}
       </TimelineContent>
