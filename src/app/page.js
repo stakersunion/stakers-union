@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/timeline'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHandFist } from '@awesome.me/kit-ebf6e3e7b8/icons/sharp/solid'
+import { faDiscord, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 
 export default function Home() {
   return (
@@ -22,18 +23,39 @@ export default function Home() {
           A collective of <span className={'text-foreground'}>home-stakers</span> for the Ethereum
           network
         </h2>
-        <Button
-          className={'items-center'}
-          asChild
-        >
-          <Link href={'https://discord.gg/57EJbMGX'}>
+        <div className={'flex flex-row items-center gap-4'}>
+          <div>
             <FontAwesomeIcon
               icon={faHandFist}
               className={'mr-2'}
             />
-            Unionize
-          </Link>
-        </Button>
+            <span className={'font-semibold text-sm'}>Unionize</span>
+          </div>
+          <Button
+            className={'items-center'}
+            asChild
+          >
+            <Link href={'https://discord.gg/57EJbMGX'}>
+              <FontAwesomeIcon
+                icon={faDiscord}
+                className={'mr-2'}
+              />
+              Discord
+            </Link>
+          </Button>
+          <Button
+            className={'items-center'}
+            asChild
+          >
+            <Link href={'https://twitter.com/stakersunion'}>
+              <FontAwesomeIcon
+                icon={faXTwitter}
+                className={'mr-2'}
+              />
+              Twitter
+            </Link>
+          </Button>
+        </div>
       </div>
       <div className={'grid grid-cols-1 sm:grid-cols-3 gap-4 my-14'}>
         <Card>
@@ -76,7 +98,7 @@ export default function Home() {
           home-stakers
         </h2>
       </div>
-      <div>
+      <div className={'flex my-14'}>
         <Timeline positions={'center'}>
           <TimelineItem status={'done'}>
             <TimelineHeading side={'left'}>Launch Stakers Union</TimelineHeading>
@@ -133,10 +155,8 @@ export default function Home() {
           </TimelineItem>
         </Timeline>
       </div>
-      <div className={'my-16'}>
-        <p className={'text-muted-foreground text-center'}>
-          Created by Ethereum community members.
-        </p>
+      <div className={'mt-16 mb-4'}>
+        <p className={'text-muted-foreground text-center'}>Built for the Ethereum Community</p>
       </div>
     </Container>
   )
