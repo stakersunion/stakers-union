@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Timeline } from '@/components/ui/timeline'
 import { Card, TimelineItem } from '@/components/home'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHandFist, faBook } from '@awesome.me/kit-ebf6e3e7b8/icons/sharp/solid'
+import { faHandFist, faBook, faHexagonImage } from '@awesome.me/kit-ebf6e3e7b8/icons/sharp/solid'
 import { faDiscord, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 
 export default function Home() {
@@ -17,13 +17,6 @@ export default function Home() {
           network
         </h2>
         <div className={'flex flex-col sm:flex-row items-center gap-4'}>
-          <div>
-            <FontAwesomeIcon
-              icon={faHandFist}
-              className={'mr-2'}
-            />
-            <span className={'font-semibold text-sm'}>Unionize: </span>
-          </div>
           <Button
             className={'items-center'}
             size={'sm'}
@@ -64,6 +57,20 @@ export default function Home() {
                 className={'mr-2'}
               />
               GitHub
+            </Link>
+          </Button>
+          <Button
+            className={'items-center'}
+            size={'sm'}
+            variant={'secondary'}
+            asChild
+          >
+            <Link href={'https://poap.website/probably-arrive-detail'}>
+              <FontAwesomeIcon
+                icon={faHexagonImage}
+                className={'mr-2'}
+              />
+              POAP
             </Link>
           </Button>
         </div>
@@ -116,7 +123,13 @@ export default function Home() {
           >
             Define the structure of the union including membership requirements, governance model,
             and decision-making processes. Use open contributions to{' '}
-            <Link href={'https://docs.stakersunion.com/'} className={'underline'}>documentation site</Link>.
+            <Link
+              href={'https://docs.stakersunion.com/'}
+              className={'underline'}
+            >
+              documentation site
+            </Link>
+            .
           </TimelineItem>
           <TimelineItem
             title={'Build Partnerships'}
