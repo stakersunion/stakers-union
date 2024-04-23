@@ -23,7 +23,7 @@ export default function Home() {
             variant={'secondary'}
             asChild
           >
-            <Link href={'https://discord.gg/wzHpQPKC'}>
+            <Link href={'https://discord.gg/vAGDagR7JT'}>
               <FontAwesomeIcon
                 icon={faDiscord}
                 className={'mr-2'}
