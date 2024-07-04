@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Timeline } from '@/components/ui/timeline'
 import { Card, TimelineItem } from '@/components/home'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHandFist, faBook, faHexagonImage } from '@awesome.me/kit-ebf6e3e7b8/icons/sharp/solid'
+import { faHandFist, faBook } from '@awesome.me/kit-ebf6e3e7b8/icons/sharp/solid'
 import { faDiscord, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 
 export default function Home() {
@@ -16,61 +16,47 @@ export default function Home() {
           A collective of <span className={'text-foreground'}>home-stakers</span> for the Ethereum
           network
         </h2>
-        <div className={'flex flex-col sm:flex-row items-center gap-4'}>
+        <div className={'flex justify-center gap-x-4'}>
+          <Button asChild>
+            <Link
+              href={'https://docs.stakersunion.com/'}
+              target={'_blank'}
+            >
+              <FontAwesomeIcon
+                icon={faBook}
+                className={'mr-2'}
+              />
+              View Proposal
+            </Link>
+          </Button>
+          <Button asChild>
+            <Link
+              href={'https://members.stakersunion.com/'}
+              target={'_blank'}
+            >
+              <FontAwesomeIcon
+                icon={faHandFist}
+                className={'mr-2'}
+              />
+              Become a Member
+            </Link>
+          </Button>
           <Button
             className={'items-center'}
-            size={'sm'}
-            variant={'secondary'}
+            variant={'ghost'}
             asChild
           >
             <Link href={'https://discord.gg/vAGDagR7JT'}>
-              <FontAwesomeIcon
-                icon={faDiscord}
-                className={'mr-2'}
-              />
-              Discord
+              <FontAwesomeIcon icon={faDiscord} />
             </Link>
           </Button>
           <Button
             className={'items-center'}
-            size={'sm'}
-            variant={'secondary'}
+            variant={'ghost'}
             asChild
           >
             <Link href={'https://twitter.com/stakersunion'}>
-              <FontAwesomeIcon
-                icon={faXTwitter}
-                className={'mr-2'}
-              />
-              Twitter
-            </Link>
-          </Button>
-          <Button
-            className={'items-center'}
-            size={'sm'}
-            variant={'secondary'}
-            asChild
-          >
-            <Link href={'https://github.com/stakersunion/docs'}>
-              <FontAwesomeIcon
-                icon={faGithub}
-                className={'mr-2'}
-              />
-              GitHub
-            </Link>
-          </Button>
-          <Button
-            className={'items-center'}
-            size={'sm'}
-            variant={'secondary'}
-            asChild
-          >
-            <Link href={'https://poap.website/probably-arrive-detail'}>
-              <FontAwesomeIcon
-                icon={faHexagonImage}
-                className={'mr-2'}
-              />
-              POAP
+              <FontAwesomeIcon icon={faXTwitter} />
             </Link>
           </Button>
         </div>
@@ -88,17 +74,6 @@ export default function Home() {
           We aim to build a registry of interested home-stakers to support their activities by
           securing stable incentives from ecosystem participants.
         </Card>
-      </div>
-      <div className={'flex justify-center'}>
-        <Button asChild>
-          <Link href={'https://docs.stakersunion.com/'}>
-            <FontAwesomeIcon
-              icon={faBook}
-              className={'mr-2'}
-            />
-            View Proposal
-          </Link>
-        </Button>
       </div>
       <div className={'my-14'}>
         <h2 className={'font-bold text-4xl text-muted-foreground text-center'}>
@@ -119,7 +94,7 @@ export default function Home() {
           <TimelineItem
             title={'Define Union Structure'}
             position={'right'}
-            status={'current'}
+            status={'done'}
           >
             Define the structure of the union including membership requirements, governance model,
             and decision-making processes. Use open contributions to{' '}
@@ -132,8 +107,22 @@ export default function Home() {
             .
           </TimelineItem>
           <TimelineItem
-            title={'Build Partnerships'}
+            title={'Grow Community'}
             position={'left'}
+            status={'current'}
+          >
+            Create an application process and begin accepting and verifying members. Build a{' '}
+            <Link
+              href={'https://members.stakersunion.com/'}
+              className={'underline'}
+            >
+              Member Area
+            </Link>{' '}
+            for user management.
+          </TimelineItem>
+          <TimelineItem
+            title={'Build Partnerships'}
+            position={'right'}
           >
             Establish partnerships with other organizations and projects in the Ethereum ecosystem.
             Collaborate on initiatives that benefit home-stakers and promote the health of the
@@ -141,7 +130,7 @@ export default function Home() {
           </TimelineItem>
           <TimelineItem
             title={'Develop Incentive Programs'}
-            position={'right'}
+            position={'left'}
           >
             Design and implement incentive programs to support home-stakers and encourage
             participation in the union. Create mechanisms for distributing rewards and tracking
